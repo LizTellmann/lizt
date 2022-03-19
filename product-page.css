@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+
+* {
+  /* border: 1px solid red;*/
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  /*border: 1px solid green;*/
+}
+
+.logo img {
+  max-height: 80px;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  margin: 0 8px;
+  color: black;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.plain-food {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.plain-food__image-container {
+  min-width: 240px;
+  max-width: 300px;
+  min-height: 80px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about {
+  margin-right: 200px;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.prescribed-food__image-container {
+  min-width: 240px;
+  max-width: 300px;
+  min-height: 80px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prescribed-food {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.subscribe {
+  margin-right: 200px;
+  margin-left: 200px;
+  padding: 20px;
+  text-align: center;
+}
