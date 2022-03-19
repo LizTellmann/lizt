@@ -65,7 +65,9 @@ img {
 
 .plain-food {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
