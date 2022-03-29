@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>How CSS is structured</title>
+  
+  <link href="./technical- page.css" rel="stylesheet">
+</head>
+
+
+<body>
+  
+  
+  
+  
+  <div class="wrapper">
+    <section class="navigation>
+    
+    <div class="nav-wrapper">
+    <header>Let's learn more about CSS</header>
+      <nav class="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li>
+            <a class="nav-link" href="#How_CSS_is_structured">How CSS is structured </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Selectors">Selectors</a>
+          </li>
+          <li><a class="nav-link" href="#Specificity">Specificity</a></li>
+          <li><a class="nav-link" href="#Properties_and_values">Properties and values</a></li>
+          <li>
+            <a class="nav-link" href="#Functions">Functions</a>
+          </li>
+          <li><a class="nav-link" href="#@rules">@rules</a></li>
+          <li><a class="nav-link" href="#Code_Examples">Code Examples</a></li>
+          <li><a class="nav-link" href="#What's_next?">What's next?</a></li>
+        </ul>
+      </nav>
+  </div>
+     </div>
+      </section>
+  
+     
+  <main id="main-doc">
+    <div class="main-wrapper">
+      
+      <section class="main-section" id="Introduction">
+        <h2>Introduction</h2>
+        <p>
+          So, you have just learnt the basics of HTML and CSS. Let’s get to know how CSS is structured so we can build our dachshund blog website.
+        </p>
+      </section>
+      
+      <section class="main-section" id="How_CSS_is_structured">
+        <h2>How CSS is structured</h2>
+        
+        <p>
+          Let's examine the three methods of applying CSS to a document: with an external stylesheet, with an internal stylesheet, and with inline styles.
+        </p>
+        <h3>External stylesheet</h3>
+        
+        <p>
+          An external stylesheet contains CSS in a separate file with a .css extension. This is the most common and useful method of bringing CSS to a document.
+          You can link a single CSS file to multiple web pages, styling all of them with the same CSS stylesheet.
+        </p>
+        <h3>Internal stylesheet</h3>
+        <p>An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place CSS inside a style element contained inside the
+          HTML head.
+        <p>
+        
+        <h3>Inline styles</h3>
+        
+        <p>
+          Inline styles are CSS declarations that affect a single HTML element, contained within a style attribute. The implementation of an inline style in an
+          HTML document might look like this:
+        </p>
+        <p>
+          Note: Avoid using CSS in this way, when possible. It is the opposite of a best practice. First, it is the least efficient implementation of CSS for
+          maintenance. One styling change might require multiple edits within a single web page.
+        </p>
+      </section>
+      
+      <section class="main-section" id="Selectors">
+        <h2>Selectors</h2>
+        
+        <p>
+          A selector targets HTML to apply styles to content. If CSS is not applying to content as expected, your selector may not match the way you think it
+          should match.
+        </p>
+        <p>
+          Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All
+          the examples below are valid selectors or lists of selectors.
+        </p>
+      </section>
+      
+      
+      <section class="main-section" id="Specificity">
+        <h2>Specificity</h2>
+        
+        <p>
+          You may encounter scenarios where two selectors select the same HTML element. Consider the stylesheet below, with a p selector that sets paragraph
+          text to blue. However, there is also a class that sets the text of selected elements to red.
+        </p>
+        <p>
+          The CSS language has rules to control which selector is stronger in the event of a conflict. These rules are called cascade and specificity. In the
+          code block below, we define two rules for the p selector, but the paragraph text will be blue. This is because the declaration that sets the paragraph
+          text to blue appears later in the stylesheet. Later styles replace conflicting styles that appear earlier in the stylesheet. This is the cascade rule.
+        </p>
+        <p>
+          The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The
+          Cascade and inheritance section in the next module explains this in detail, including how to calculate specificity.
+        </p>
+      </section>
+      
+      
+      <section class="main-section" id="Properties_and_values">
+        <h2>Properties and values</h2>
+        
+        <p>
+          At its most basic level, CSS consists of two components:
+        </p>
+        <h3>Properties: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, font-size, width,
+          background-color.
+        </h3>
+        <h3>Values: Each property is assigned a value. This value indicates how to style the property.
+          The example below highlights a single property and value. The property name is color and the value is blue.
+        </h3>
+        
+        <p> When a property is paired with a value, this pairing is called a CSS declaration. CSS declarations are found within CSS Declaration Blocks. In the
+          example below, highlighting identifies the CSS declaration block.
+        </p>
+        <p>Finally, CSS declaration blocks are paired with selectors to produce CSS rule sets (or CSS rules). The example below contains two rules: one for the
+          h1 selector and one for the p selector. The colored highlighting identifies the h1 rule.
+        </p>
+        <p> Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which
+          declarations apply to every single element of a page.
+        </p>
+        <p>CSS properties and values are case-insensitive. The property and value in a property-value pair are separated by a colon (:).</p>
+      </section>
+      
+      <section class="main-section" id="Functions">
+        <h2>Functions</h2>
+        
+        <p>
+          While most values are relatively simple keywords or numeric values, there are some values that take the form of a function.
+        </p>
+      </section>
+      
+      <section class="main-section" id="@rules">
+        <h2>@rules</h2>
+        
+        <p>
+          CSS @rules (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. Some @rules are simple with just a keyword
+          and a value. For example, @import imports a stylesheet into another CSS stylesheet:
+        </p>
+        <p>One common @rule that you are likely to encounter is @media, which is used to create media queries. Media queries use conditional logic for applying
+          CSS styling.
+        </p>
+      </section>
+      
+      
+      <section class="main-section" id="Code_Examples">
+        <h2>Code Examples</h2>
+        
+        <p>
+          Here are some examples of the CSS code mentioned above:
+        </p>
+        <p>
+          styles.css:
+        </p>
+        <code>
+          <span class="token comment">/*Create your test CSS here */</span>
+          <span class="token selector">p</span>
+          <span class="token punctuation">{</span>
+          <span class="token property">color</span>
+          <span class="token punctuation">:</span>
+          "red"
+          <span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        </code>
+        <p>
+          Making your CSS more specific:
+        </p>
+        <code>
+          <span class="token tag">
+            <span class="token punctuation"><</span>
+            "p"
+          </span>
+          <span class="token attr-name">class</span>
+          <span class="token punctuation attr-equals">=</span>
+          <span class="token punctuation">"</span>
+          "special"
+          <span class="token punctuation">"</span>
+          <span class="token punctuation">></span>
+          "what color am I"
+          <span class="token punctuation"><</span>
+          <span class="token punctuation">/</span>
+          "p"
+          <span class="token punctuation">></span>
+        </code>
+        <p>
+          The calc() function:
+        </p>
+        <code>
+          <span>
+            <span><</span>
+            "div"
+          </span>
+          <span>class</span>
+          <span>
+            <span>=</span>
+            <span>"</span>
+            "outer"
+            <span>"</span>
+          </span>
+          <span>></span>
+          <span>
+            <span><</span>
+            "div"
+          </span>
+          <span>class</span>
+          <span>
+            <span>=</span>
+            <span>"</span>
+            "box"
+            <span>"</span>
+          </span>
+          <span>></span>
+          <span>
+            "The inner box is 90% - 30px."
+          </span>
+          
+          "div"
+        
+        </code>
+        
+        <p>
+          @rules importing a stylesheet
+        </p>
+        <code>
+          <span>@import</span>
+          <span>'style2.css'</span>
+          <span>;</span>
+        
+        </code>
+        
+        <p>
+          Shorthand examples:
+        </p>
+        <code>
+          <span>background</span>
+          <span>:</span>
+          "red"
+          <span>url</span>
+          <span>(</span>
+          "bg-graphic.png"
+          <span>)</span>
+          "10px 10px repeat-x fixed"
+          <span>;</span>
+        </code>
+      </section>
+      
+      <section class="main-section" id="What's_next?">
+        <h2>What's next?</h2>
+        <p>
+          It's useful to understand how the browser uses HTML and CSS to display a webpage. The next article, How CSS works, explains the process.
+        </p>
+      </section>
+    </div>
+  </main>
+
+
+</body>
+
+</html>
