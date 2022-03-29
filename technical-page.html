@@ -9,43 +9,47 @@
 
 
 <body>
-  
-  
-  
-  
-  <div class="wrapper">
-    <section class="navigation>
+  <main id="main-doc" class="wrapper">
     
     <div class="nav-wrapper">
-    <header>Let's learn more about CSS</header>
       <nav class="nav-bar">
         <ul>
-          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li>
+            <a class="nav-link" href="#Introduction">Introduction</a></li>
           <li>
             <a class="nav-link" href="#How_CSS_is_structured">How CSS is structured </a>
           </li>
           <li>
             <a class="nav-link" href="#Selectors">Selectors</a>
           </li>
-          <li><a class="nav-link" href="#Specificity">Specificity</a></li>
-          <li><a class="nav-link" href="#Properties_and_values">Properties and values</a></li>
+          <li>
+            <a class="nav-link" href="#Specificity">Specificity</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Properties_and_values">Properties and values</a>
+          </li>
           <li>
             <a class="nav-link" href="#Functions">Functions</a>
           </li>
-          <li><a class="nav-link" href="#@rules">@rules</a></li>
-          <li><a class="nav-link" href="#Code_Examples">Code Examples</a></li>
-          <li><a class="nav-link" href="#What's_next?">What's next?</a></li>
+          <li>
+            <a class="nav-link" href="#@rules">@rules</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Code_Examples">Code Examples</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#What's_next?">What's next?</a>
+          </li>
         </ul>
       </nav>
-  </div>
-     </div>
-      </section>
-  
-     
-  <main id="main-doc">
+    </div>
+    
     <div class="main-wrapper">
       
+      <h1>Let's learn more about CSS</h1>
+      
       <section class="main-section" id="Introduction">
+        
         <h2>Introduction</h2>
         <p>
           So, you have just learnt the basics of HTML and CSS. Let’s get to know how CSS is structured so we can build our dachshund blog website.
@@ -94,7 +98,6 @@
         </p>
       </section>
       
-      
       <section class="main-section" id="Specificity">
         <h2>Specificity</h2>
         
@@ -113,19 +116,20 @@
         </p>
       </section>
       
-      
       <section class="main-section" id="Properties_and_values">
         <h2>Properties and values</h2>
         
         <p>
           At its most basic level, CSS consists of two components:
         </p>
-        <h3>Properties: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, font-size, width,
-          background-color.
-        </h3>
-        <h3>Values: Each property is assigned a value. This value indicates how to style the property.
-          The example below highlights a single property and value. The property name is color and the value is blue.
-        </h3>
+        <ul>
+          <li>Properties: These are human-readable identifiers that indicate which stylistic features you want to modify. For example, font-size, width,
+            background-color.
+          </li>
+          <li>Values: Each property is assigned a value. This value indicates how to style the property.
+            The example below highlights a single property and value. The property name is color and the value is blue.
+          </li>
+        </ul>
         
         <p> When a property is paired with a value, this pairing is called a CSS declaration. CSS declarations are found within CSS Declaration Blocks. In the
           example below, highlighting identifies the CSS declaration block.
@@ -159,7 +163,6 @@
         </p>
       </section>
       
-      
       <section class="main-section" id="Code_Examples">
         <h2>Code Examples</h2>
         
@@ -169,36 +172,20 @@
         <p>
           styles.css:
         </p>
-        <code>
-          <span class="token comment">/*Create your test CSS here */</span>
-          <span class="token selector">p</span>
-          <span class="token punctuation">{</span>
-          <span class="token property">color</span>
-          <span class="token punctuation">:</span>
-          "red"
-          <span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-        </code>
+        <pre>
+          <code>
+/*Create your test CSS here */
+p {
+  color: "red";
+}
+          </code>
+        </pre>
         <p>
           Making your CSS more specific:
         </p>
-        <code>
-          <span class="token tag">
-            <span class="token punctuation"><</span>
-            "p"
-          </span>
-          <span class="token attr-name">class</span>
-          <span class="token punctuation attr-equals">=</span>
-          <span class="token punctuation">"</span>
-          "special"
-          <span class="token punctuation">"</span>
-          <span class="token punctuation">></span>
-          "what color am I"
-          <span class="token punctuation"><</span>
-          <span class="token punctuation">/</span>
-          "p"
-          <span class="token punctuation">></span>
-        </code>
+        <pre><code>
+&lt;p class="special">what color am I&lt;/p&gt;
+        </code></pre>
         <p>
           The calc() function:
         </p>
@@ -230,9 +217,7 @@
           <span>
             "The inner box is 90% - 30px."
           </span>
-          
           "div"
-        
         </code>
         
         <p>
@@ -269,8 +254,6 @@
       </section>
     </div>
   </main>
-
-
 </body>
 
 </html>

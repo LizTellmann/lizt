@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: sans-serif;
+
 }
 
 *, *:before, *:after {
@@ -13,16 +15,33 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: normal;
 }
 
+p {
+  color: #3a3a3a;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
 ol, ul {
   list-style: none;
 }
 
-* {
+/** {
   border: 1px solid red;
-}
+}*/
 
 .header {
   height: 80px;
+}
+
+.nav-wrapper {
+  min-width: 240px;
+  position: relative;
 }
 
 .wrapper {
@@ -33,50 +52,61 @@ ol, ul {
   padding-right: 15px;
   padding-left: 15px;
   border: 1px solid green;
+  display: flex;
+  gap: 80px;
 }
 
-nav {
-  position: fixed; /* Make it stick, even on scroll */
-  width: 15%;
-  height: 100%; /* Full height */
+.nav-bar {
+  top: 50px;
+  position: sticky; /* Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
-  margin: 0;
-  padding: 0;
   background-color: #f1f1f1;
   list-style-type: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
   margin: 0 8px;
   color: black;
   font-family: Lato, sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 50px;
+  letter-spacing: 0.05em;
   text-decoration: none;
 }
 
-main {
+.main-wrapper {
+  max-width: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/*main {
   position: absolute;
   margin-right: 350px;
   margin-bottom: 110px;
   margin-left: 350px;
   padding: 20px;
   line-height: 30px;
-}
+}*/
 
 code {
-  position: relative;
+  background: #f1f1f1;
   display: block;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #f7f7f7;
-  line-height: 2;
-  white-space: pre-line;
-  text-align: left;
-  word-wrap: normal;
-  word-break: normal;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 10px 40px;
 }
 
 @media (max-width: 600px) {
@@ -84,16 +114,4 @@ code {
     font-size: 30px;
   }
 
-  .nav-wrapper {
-    max-width: 500px;
-    min-height: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    border: 3px solid blue;
-  }
-
-  .main-wrapper {
-  }
 }
